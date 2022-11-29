@@ -11,3 +11,35 @@
 section {
   padding-top: 5rem;
 }
+.a {
+  display: inline-block;
+  padding: 16px;
+  text-decoration: none;
+}
+.description {
+  line-height: 18px;
+  max-height: calc(18px * 3);
+  overflow: hidden;
+}
+.button-readmore::after {
+  content: 'Read more';
+}
+.button-readmore {
+  padding: 5px 10px;
+  background: #efefef;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button-readmore:hover {
+  background: #ccc;
+} 
+#check-readmore:checked ~ .button-readmore::after {
+  content: 'Read less';
+}
+#check-readmore:checked ~ .description {
+  max-height: 100vh;
+}
+#check-readmore{
+  position: absolute;
+  left: -1000px;
+}
